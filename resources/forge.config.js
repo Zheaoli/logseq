@@ -45,10 +45,6 @@ module.exports = {
     {
       name: '@electron-forge/maker-snap',
       config: {
-        features: {
-          audio: true,
-          webgl: true
-        },
         summary: 'Logseq',
       }
     }
