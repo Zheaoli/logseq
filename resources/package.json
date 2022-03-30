@@ -18,6 +18,12 @@
   "config": {
     "forge": "./forge.config.js"
   },
+  "build": {
+    "snap": {
+      "summary": "Logseq",
+      "title": "Logseq"
+    }
+  },
   "dependencies": {
     "better-sqlite3": "7.4.5",
     "chokidar": "^3.5.1",
@@ -48,7 +54,8 @@
     "electron": "15.1.2",
     "electron-builder": "^22.11.7",
     "electron-forge-maker-appimage": "trusktr/electron-forge-maker-appimage#patch-1",
-    "electron-rebuild": "3.2.5"
+    "electron-rebuild": "3.2.5",
+    "electron-builder": "^22.9.1"
   },
   "resolutions": {
     "@electron-forge/cli/**/colors": "1.4.0",

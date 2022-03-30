@@ -41,12 +41,6 @@ module.exports = {
     {
       name: 'electron-forge-maker-appimage',
       platforms: ['linux']
-    },
-    {
-      name: '@electron-forge/maker-snap',
-      config: {
-        summary: 'Logseq',
-      }
     }
   ],
 

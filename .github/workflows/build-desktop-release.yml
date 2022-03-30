@@ -127,7 +127,7 @@ jobs:
           path: static
 
   build-linux:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     needs: [ compile-cljs ]
     steps:
       - name: Download The Static Asset
@@ -159,11 +159,13 @@ jobs:
       #     key: ${{ runner.os }}-node-modules
 
       - name: Build/Release Electron App
-        run: yarn install && yarn electron:make
+        run: |
+          yarn install && yarn electron:make
+          npx electron-builder --linux snap
         working-directory: ./static
 
       - name: Preview the output
-        run: ls out/
+        run: ls out/ && ls ./dist
         working-directory: ./static
 
       - name: Save artifacts
