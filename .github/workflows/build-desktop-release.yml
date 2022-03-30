@@ -158,6 +158,10 @@ jobs:
         run: yarn install && yarn electron:make
         working-directory: ./static
 
+      - name: Preview the output
+        run: ls out/
+        working-directory: ./static
+
       - name: Save artifacts
         run: |
           mkdir -p builds
